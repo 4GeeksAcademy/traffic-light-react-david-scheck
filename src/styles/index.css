@@ -10,3 +10,66 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.traffic-light {
+    background-color: #333;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+  }
+  
+  .light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px 0;
+    opacity: 0.3;
+  }
+  
+  .light.active {
+    opacity: 1;
+  }
+  
+  .red { background-color: #ff0000; }
+  .yellow { background-color: #ffff00; }
+  .green { background-color: #00ff00; }
+
+  .purple { background-color: #c017c0; }
+
+  .light.active.shine {
+    animation: shine 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes shine {
+    from {
+      box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+    }
+    to {
+      box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.9);
+    }
+}
+
+.controls {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px;
+    width: 100%; /* Make sure the controls container takes full width */
+  }
+  
+  /* You might want to add some styles for the buttons */
+  .controls button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .controls button:hover {
+    background-color: #45a049;
+  }
